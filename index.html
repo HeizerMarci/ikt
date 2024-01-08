@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kábító Igazság</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            color: white;
+            font-family: 'Arial', sans-serif;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        nav {
+            text-align: center;
+            margin: 20px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            margin: 0 15px;
+            font-weight: bold;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: #0084ff62;
+        }
+
+        nav a.active {
+            background-color: #0084ff;
+        }
+
+        section {
+            padding: 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .movie-info {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+            position: relative;
+        }
+
+        .movie-image {
+            width: 100%;
+            max-width: 400px; /* A méretet ide állíthatod be */
+            margin: 20px 0;
+            animation: parallax 8s infinite linear;
+        }
+
+        .scrolling-text {
+            position: absolute;
+            width: 100%;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .scrolling-text:nth-child(1) {
+            top: 0;
+            background: rgba(0, 0, 0, 0.6);
+            color: white;
+            animation: scrollText1 10s linear infinite;
+        }
+
+        .scrolling-text:nth-child(2) {
+            top: 50px;
+            background: rgba(0, 0, 0, 0.6);
+            color: white;
+            animation: scrollText2 20s linear infinite;
+        }
+
+        .scrolling-text:nth-child(3) {
+            top: 100px;
+            background: rgba(0, 0, 0, 0.6);
+            color: white;
+            animation: scrollText3 20s linear infinite;
+        }
+
+        @keyframes scrollText1 {
+            0% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        @keyframes scrollText2 {
+            0% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        @keyframes scrollText3 {
+            0% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        body::after {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            animation: changeColor 10s linear infinite alternate;
+        }
+
+        @keyframes changeColor {
+            from {
+                background: rgb(158, 158, 158);
+            }
+            to {
+                background: #242424;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Kábító Igazság</h1>
+    </header>
+
+    <nav>
+        <a href="#főoldal" class="active">Főoldal</a>
+        <a href="#szereplők">Szereplők</a>
+        <a href="#film-megtekintése">Film Megtekintése</a>  
+    </nav>
+
+    <section id="főoldal">
+        <div class="movie-info">
+            <img src="hatter.jpg" alt="Film poszter" class="movie-image">
+            <p>Készítette: Marci, Milán, Olcsa, Tamás, Zsombor</p>
+            <div class="scrolling-text">🔥Moziba: 2024.01.09🔥🔞Korhatár: 18+🔞</div>
+        </div>
+    </section>
+
+    <section id="szereplők">
+        <!-- Itt jöhet a szereplők oldal tartalma -->
+    </section>
+
+    <section id="film-megtekintése">
+        <!-- Itt jöhet a film megtekintése oldal tartalma -->
+    </section>
+
+</body>
+</html>
