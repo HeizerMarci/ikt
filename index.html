@@ -88,9 +88,9 @@
 
         .scrolling-text:nth-child(1) {
             top: 0;
-            background: rgba(0, 0, 0, 0.6);
+            background: rgba(0, 0, 0, 0.8);
             color: white;
-            animation: scrollText1 10s linear infinite;
+            animation: scrollText1 20s linear infinite;
         }
 
         .scrolling-text:nth-child(2) {
@@ -102,9 +102,27 @@
 
         .scrolling-text:nth-child(3) {
             top: 100px;
-            background: rgba(0, 0, 0, 0.6);
+            background: rgba(0, 0, 0, 0.4);
             color: white;
             animation: scrollText3 20s linear infinite;
+        }
+
+        @keyframes parallax {
+            0% {
+                transform: translateX(0);
+            }
+            25% {
+                transform: translateX(-50px);
+            }
+            50% {
+                transform: translateX(0);
+            }
+            75% {
+                transform: translateX(50px);
+            }
+            100% {
+                transform: translateX(0);
+            }
         }
 
         @keyframes scrollText1 {
@@ -164,19 +182,32 @@
     <nav>
         <a href="#főoldal" class="active">Főoldal</a>
         <a href="#szereplők">Szereplők</a>
-        <a href="https://youtu.be/CBQbxPhIOc4">Film Megtekintése</a>  
+        <a href="#film-megtekintése">Film Megtekintése</a>
     </nav>
 
     <section id="főoldal">
         <div class="movie-info">
             <img src="hatter.jpg" alt="Film poszter" class="movie-image">
             <p>Készítette: Marci, Milán, Olcsa, Tamás, Zsombor</p>
-            <div class="scrolling-text">🔥Moziba: 2024.01.09🔥🔞Korhatár: 18+🔞</div>
+            <div class="scrolling-text">Moziba Megjelenés: 2024.01.09</div>
+            <div class="scrolling-text">Korhatár: 18+</div>
+            <div class="scrolling-text">Ez egy harmadik szöveg sáv</div>
         </div>
     </section>
 
     <section id="szereplők">
-        <!-- Itt jöhet a szereplők oldal tartalma -->
+        <div class="movie-info">
+            <h2>Szereplők</h2>
+            <ul>
+                <li>Marci - vágó</li>
+                <li>Milán - színész, rendező</li>
+                <li>Olcsa - operatőr</li>
+                <li>Tamás - operatőr</li>
+                <li>Zsombor - színész</li>
+                <li>Márk - főszereplő</li>
+                <li>Brendon - színész</li>
+            </ul>
+        </div>
     </section>
 
     <section id="film-megtekintése">
