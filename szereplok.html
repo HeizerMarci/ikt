@@ -3,8 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kábító Igazság - Szereplők</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Kábító Igazság</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            color: white;
+            font-family: 'Arial', sans-serif;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        nav {
+            text-align: center;
+            margin: 20px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            margin: 0 15px;
+            font-weight: bold;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: #0084ff62;
+        }
+
+        nav a.active {
+            background-color: #0084ff;
+        }
+
+        section {
+            padding: 20px;
+            position: relative;
+            overflow: hidden;
+        }
+        body::after {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            animation: changeColor 10s linear infinite alternate;
+        }
+
+        @keyframes changeColor {
+            from {
+                background: rgb(158, 158, 158);
+            }
+            to {
+                background: #242424;
+            }
+        }
+    </style>
 </head>
 <body>
 
@@ -13,25 +88,17 @@
     </header>
 
     <nav>
-        <a href="index.html">Főoldal</a>
-        <a href="szereplok.html" class="active">Szereplők</a>
-        <a href="#film-megtekintése">Film Megtekintése</a>
+        <a href="./" class="active">Főoldal</a>
+        <a href="/szereplok">Szereplők</a>
+        <a href="#film-megtekintése">Film Megtekintése</a>  
     </nav>
 
-    <section id="szereplők">
+    <section id="főoldal">
         <div class="movie-info">
-            <h2>Szereplők</h2>
-            <ul>
-                <li>Marci - vágó</li>
-                <li>Milán - színész, rendező</li>
-                <li>Olcsa - operatőr</li>
-                <li>Tamás - operatőr</li>
-                <li>Zsombor - színész</li>
-                <li>Márk - főszereplő</li>
-                <li>Brendon - színész</li>
-            </ul>
+            <img src="hatter.jpg" alt="Film poszter" class="movie-image">
+            <p>Készítette: Marci, Milán, Olcsa, Tamás, Zsombor</p>
+            <div class="scrolling-text">🔥Moziba: 2024.01.09🔥🔞Korhatár: 18+🔞</div>
         </div>
     </section>
-
 </body>
 </html>
